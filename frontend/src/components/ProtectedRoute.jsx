@@ -20,6 +20,15 @@ e' soltanto una layer in piu' via frontend
 function ProtectedRoute({children}) {
     //default value is null \/
     const [isAuthorized, setIsAuthorized] = useState(null);
+    
+    //as soon as we load our protected route
+    //we check for authentication
+    //we call auth function
+    
+    useEffect(() => {
+        auth().catch(() => setIsAuthorized(false))
+    }, [])
+    
     //async function
     //refreshes the token automatically
     const refreshToken = async () => {
