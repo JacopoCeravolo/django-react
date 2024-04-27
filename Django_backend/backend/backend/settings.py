@@ -43,7 +43,7 @@ REST_FRAMEWORK = {
     ],
 }
 
-#* JWT  Jason Web Token, it permit secure authentication with JWTAuthentication 
+#* JWT  Json Web Token, it permits secure authentication with JWTAuthentication 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
